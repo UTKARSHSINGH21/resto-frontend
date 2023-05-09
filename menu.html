@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Our Menu</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/c3c4bc64da.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="menu.js"></script>
+
+</head>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#all").css("color", "#ffca70");
+
+		$("#all").click(function () {
+			$("li").css("color", "white");
+			$(this).css("color", "#ffca70");
+			$(".menu").show(600);
+		});
+
+		$("#NorthL").click(function () {
+			$("li").css("color", "white");
+			$(this).css("color", "#ffca70");
+			$(".menu").hide();
+			$("#North").show(600);
+		});
+
+		$("#BengaliL").click(function () {
+			$("li").css("color", "white");
+			$(this).css("color", "#ffca70");
+			$(".menu").hide();
+			$("#Bengali").show(600);
+		});
+
+
+		$("#GujaratiL").click(function () {
+			$("li").css("color", "white");
+			$(this).css("color", "#ffca70");
+			$(".menu").hide();
+			$("#Gujarati").show(600);
+		});
+		$("#MarathiL").click(function () {
+			$("li").css("color", "white");
+			$(this).css("color", "#ffca70");
+			$(".menu").hide();
+			$("#Marathi").show(600);
+		});
+
+
+		$("#southL").click(function () {
+			$("li").css("color", "white");
+			$(this).css("color", "#ffca70");
+			$(".menu").hide();
+			$("#South").show(600);
+		});
+
+		$(":button").click(function() {
+				var init = parseInt($("#cartQty").html());
+				init = init + 1; 
+				$("#cartQty").html(init);
+		});
+	});
+
+</script>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		user-select: none;
+	}
+
+	body {
+		background-color: #91091E;
+
+	}
+
+	.mainbody {
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		text-decoration: none;
+		padding: 41px 10px;
+		font-size: 20px;
+		display: inline;
+		font-family: 'Karla', sans-serif;
+		letter-spacing: 1px;
+		color: white;
+		cursor: pointer;
+		display: inline;
+	}
+
+	li a {
+		text-decoration: none;
+		color: white;
+		padding: 22px;
+
+	}
+
+	.item1 a {
+		text-decoration: none;
+		font-family: 'Karla', sans-serif;
+		font-weight: bold;
+	}
+
+
+	.titlebar {
+		display: flex;
+		font-size: 20px;
+		justify-content: space-between;
+		font-family: "awanzaman";
+		margin: 0px 81px;
+		align-items: center;
+		margin-top: 10px;
+
+	}
+
+	h1 {
+		font-family: "famosa";
+		font-size: 60px;
+		color: #ffca70;
+	}
+
+	h2 {
+		font-family: "karla";
+		font-size: 20px;
+		color: antiquewhite;
+		margin: 10px 0px;
+		text-align: center;
+
+	}
+
+
+	.maincontent {
+		display: flex;
+		flex-direction: column;
+		padding: 10%;
+		margin: auto;
+		width: 100vw;
+	}
+
+	.menu {
+		display: inline flex;
+		gap: 3vw;
+		flex-wrap: wrap;
+		justify-content: center;
+
+	}
+
+	.menumain {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.food {
+		display: inline flex;
+		flex-direction: column;
+		padding: 20px;
+		border: 1px solid #ffca70;
+		margin: 70px 0px;
+		border-radius: 7px;
+		width: 18%;
+		transform-origin: center;
+
+
+	}
+
+
+	.food input {
+		padding: 5px;
+		border-radius: 20px;
+		background-color: #91091E;
+		border: 1px solid #ffca70;
+		font-size: 20px;
+		font-family: "awanzaman";
+		font-weight: bold;
+		color: #ffca70;
+		width: 50%;
+
+	}
+
+	p {
+		color: white;
+		text-align: center;
+
+	}
+
+	.food input:hover {
+		background-color: #ffca70;
+		color: #91091E;
+	}
+
+	.pricebtn {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+		justify-self: flex-end;
+	}
+
+	.cuisine-type {
+		margin-top: 30px;
+		display: flex;
+		width: 100vw;
+		justify-content: center;
+	}
+
+	.cuisine-type li {
+		font-size: 20px;
+		margin-left: 20px;
+
+	}
+
+	.cuisine-type li a:hover {
+
+		color: #ffca70;
+	}
+
+	img {
+		display: inline
+	}
+
+	#cartQty {
+		display: inline;
+		background-color:#ffca70;
+		color: #91091E;
+		font-size: 13px;
+		position: absolute;
+		right : 105px;
+	 	top: 45px;
+		border-radius: 50%;
+		padding: 0px 4px;
+		font-weight: bold;
+	}
+</style>
+
+
+<body>
+	<div class="mainbody">
+		<div class="titlebar">
+			<div class="item1">
+				<a href="index.html"><img src="/Images/LOGO.png" height="100px"></a>
+			</div>
+			<div class="item2">
+
+				<nav>
+					<ul>
+						<li> <a href=#order>Order</a></li>
+						<li> <a href="Signin.html">Login</a></li>
+						<li> <a href="#"><i class="fa-solid fa-cart-shopping" style="color:#ffca70"></i></a>
+							 <p id="cartQty"> 0 </p>
+						</li>
+
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<main>
+			<div class="main-content">
+
+				<div class="menuhead">
+					<h1 style="text-align: center;"> Our Menu </h1>
+				</div>
+
+				<div class="cuisine-type item2">
+
+					<nav>
+						<ul>
+							<li id="all">All</li>
+							<li id="NorthL">North Indian</li>
+							<li id="BengaliL">Bengali</li>
+							<li id="GujaratiL">Gujarati</li>
+							<li id="MarathiL">Maharashtrian</li>
+							<li id="southL">South Indian</li>
+
+
+
+						</ul>
+					</nav>
+				</div>
+
+				<div class="menumain">
+					<div class="menu" id="North">
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_North</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_North</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_North</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_North</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+					</div>
+					<div class="menu" id="Bengali">
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_Bengali</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_Bengali</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_Bengali</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_Bengali</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+					</div>
+					<div class="menu" id="Gujarati">
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_Guj</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_Guj</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_Guj</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_Guj</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+					</div>
+					<div class="menu" id="Marathi">
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_maha</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_maha</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_maha</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_maha</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+					</div>
+					<div class="menu" id="South">
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_south</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_south</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_south</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+
+						<div class="food">
+							<img src="Images/samosa.png" width=200px style="padding: 0px 70px;">
+
+							<h2> FOOD_south</h2>
+							<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, harum?</p>
+							<div class="pricebtn">
+								<p style="font-size: 20px; align-self:center;"> ₹1000</p>
+								<input type="button" value="Add To Cart">
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+	</div>
+	</div>
+
+</body>
+
+</html>
